@@ -1,0 +1,34 @@
+/*цвет основного фона color #2F303A;  */
+/* акцент бирюза #2196F3 черный #212121  */
+/* белый #FFFFFF*/
+/*fill #212121 */
+/* серый #757575 */
+
+:root{
+    --title-text-color: #212121;
+    --accent-text-color: #2196F3;
+    --primary-bg-color: #ffff;
+}
+    
+body {background-color: var(--primary-bg-color);
+      }
+.list {list-style: none;}
+.logo {color: #000000}
+/* Site nav */
+.site-nav {color: var(--accent-color);}
+.site-nav:hover {color: #000000}
+.site-nav:focus {color: #000000}
+/* Hero */
+.hero-title {color: var(--accent-text-color);}
+/* Секция особенности */
+
+/* Section */
+.section-title {color: var(--accent-text-color);}
+/* Button */
+.button {background-color: var(--primary-bg-color);
+
+}
+
+
+
+
