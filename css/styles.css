@@ -227,14 +227,14 @@ line-height: 1.87;
 letter-spacing: 0.06em;
 cursor: pointer;
 text-align: center;
-background: transparent;
+background-color: var(--accent-text-color);
 border: 0;
 }
-.modal-button:hover,
+/* .modal-button:hover,
 .modal-button:focus {
-    background-color: var(--accent-text-color) ;
+    
     color: var(--primary-bg-color)
-}
+} */
 
 /* Секция особенности */
 
@@ -253,6 +253,7 @@ padding-bottom: 94px;
     margin-bottom: 30px;
     background: var(--filter-list-color);
     border-radius: 4px;
+    height: 120px;
 }
 .feature-icon{
     width: 70px;
@@ -315,9 +316,6 @@ justify-content: space-between;
  .team-section{
     padding-top: 94px;
     padding-bottom: 94px;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: var(--filter-list-color) ;
 
      }
@@ -338,7 +336,7 @@ letter-spacing: 0.03em;
     flex-basis: calc((100% - 90px) / 4);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
+    background-color:var(--primary-bg-color);
  }
  .team-item:not(:last-child) {
      margin-right: 30px;
@@ -459,9 +457,6 @@ letter-spacing: 0.03em;
 .footer-section{
     padding-top: 60px;
     padding-bottom: 60px;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: var(--footer-bg-color);
     }
 .footer-logo-adress-social{
@@ -635,8 +630,13 @@ letter-spacing: 0.03em;
 margin-top: 4px;
 }
 .projects-list-content{
+box-sizing: border-box;
 justify-content: center;
 padding: 20px 24px 20px 24px;
+border: 1px solid #EEEEEE;
+}
+.projects-list-content{
+    border-top: 0;
 }
 
 
