@@ -11,7 +11,7 @@
 
 
 
-
+/* Список пременных макета */
 :root{
     --title-text-color: #212121;
     --accent-text-color: #2196f3;
@@ -22,9 +22,11 @@
     --projects-list-item-border-color: #EEEEEE;
     --footer-bg-color:#2F303A;
     --social-link-color: #AFB1B8;
-
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --timing-duration: 250ms;
 }
-    /*Задаем тип блочной модели */
+ 
+/*Задаем тип блочной модели */
 html {
     box-sizing: border-box;
     }
@@ -112,24 +114,45 @@ color:var(--primary-bg-color);
 .menu-list{
     display: flex;
     margin-left: 93px;
+       
 }
 
 .menu-list li:not(:last-child) {
     margin-right: 50px;
 }
 .menu-list-item {
+position: relative;
 font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: #212121;
+transition: color var(--timing-duration) var(--timing-function);
 }
+
+.current{
+    position: relative;
+}
+.current::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -32px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-text-color);
+}
+    
+
+
+
 .menu-list-item:hover,
-.menu-list-item:focus {
-    color: #2196F3;
-}
+.menu-list-item:focus,
 .current{
     color: var(--accent-text-color);
+ 
 }
 
 .contacts-list li:not(:last-child){
@@ -147,7 +170,9 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--feature-list-text-color);
+transition: color var(--timing-duration) var(--timing-function);
 }
+
 .email-link:hover,
 .email-link:focus {
     color: #2196F3;
@@ -161,7 +186,7 @@ color: var(--feature-list-text-color);
     height: 12px;
     margin-right: 10px;
     fill: var(--feature-list-text-color);
-
+    transition: fill var(--timing-duration) var(--timing-function);
 }
 
 .tel-link{
@@ -170,10 +195,12 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--feature-list-text-color);
+transition: color var(--timing-duration) var(--timing-function);
 }
 .tel-link:hover,
 .tel-link:focus{
     color: var(--accent-text-color);
+
 }
 .tel-link:hover .tel-link-icon,
 .tel-link:focus .tel-link-icon{
@@ -184,6 +211,7 @@ color: var(--feature-list-text-color);
     height: 16px;
     margin-right: 10px;
     fill: var(--feature-list-text-color);   
+    transition: fill var(--timing-duration) var(--timing-function);
 }
 
 /* Hero section*/
@@ -230,11 +258,6 @@ text-align: center;
 background-color: var(--accent-text-color);
 border: 0;
 }
-/* .modal-button:hover,
-.modal-button:focus {
-    
-    color: var(--primary-bg-color)
-} */
 
 /* Секция особенности */
 
@@ -259,11 +282,6 @@ padding-bottom: 94px;
     width: 70px;
     height: 70px;   
 }
-/* .feature-list-item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .feature-list-item:not(:last-child){
     margin-right: 30px;
@@ -306,10 +324,28 @@ letter-spacing: 0.03em;
     display: flex;
     }
 .function-list-item {
+position: relative;
 justify-content: space-between;
     }
 .function-list-item:not(:last-child){
     margin-right: 30px;
+}
+.function-label{
+position: absolute;
+bottom: 0px;
+width: 370px;
+height: 70px;
+background: rgba(47, 48, 58, 0.8);
+padding-top: 27px;
+}
+.function-label-text{
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--primary-bg-color);
 }
 
  /* Секция наша команда */
@@ -375,6 +411,7 @@ letter-spacing: 0.03em;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    transition: background-color var(--timing-duration) var(--timing-function);
     }
 
 .social-list-item:not(:last-child) {
@@ -393,6 +430,7 @@ letter-spacing: 0.03em;
     width: 20px;
     height: 20px;
     fill: var(--social-link-color);
+    transition: fill var(--timing-duration) var(--timing-function);
     }
 
     /* Постоянные клиенты */
@@ -433,12 +471,14 @@ letter-spacing: 0.03em;
         border: 1px solid var(--social-link-color);
         box-sizing: border-box;
         border-radius: 4px;
+        transition: border var(--timing-duration) var(--timing-function);
 
     }
     .client-icon{
         width: 106px;
         height: 60px;
         fill: var(--social-link-color);
+        transition: fill var(--timing-duration) var(--timing-function);
     }
     .client-item-link:hover,
     .client-item-link:focus{
@@ -528,14 +568,14 @@ color: var(--primary-bg-color);
     box-sizing: border-box;
     border-radius: 50%;
     background-color:rgba(255, 255, 255, 0.1);
-    }
+    transition: background-color var(--timing-duration) var(--timing-function);    
+}
 
 .footer-social-link:not(:last-child) {
      margin-right: 10px;
  }
  .footer-social-link-item:hover,
  .footer-social-link-item:focus {
-    border-radius: 50%; 
     background-color: var(--accent-text-color);
  }
  
@@ -586,14 +626,15 @@ margin-right: 8px;
     cursor: pointer;
     padding: 6px 22px 6px 22px;
     border: 0;
+    border-radius: 4px;
+    transition: background-color var(--timing-duration) var(--timing-function), color var(--timing-duration) var(--timing-function), box-shadow var(--timing-duration) var(--timing-function);
 }
 .filter-button:hover,
 .filter-button:focus {
     background-color: var(--accent-text-color) ;
     color: var(--filter-list-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-}
+    }
 /*Projects menu */
 
 .projects-list{
@@ -605,13 +646,44 @@ margin-right: 8px;
 /* .projects-list-item */
 
 .projects-list-item{
+   
     cursor: pointer;
     margin-top: 30px;
     margin-left: 30px;
     flex-basis: calc((100% - 90px) / 3);
-    }
+    transition: box-shadow var(--timing-duration) var(--timing-function);
+}
 .projects-list-item:hover{
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+.projects-list-item-link:hover .overlay,
+.projects-list-item-link:focus .overlay{
+transform: translateY(0%);    
+}
+
+.projects-list-img{
+position: relative;
+overflow: hidden;
+}
+.overlay{
+position: absolute;
+top:0;
+left: 0;
+height: 100%;
+width: 100%;
+font-weight: 500;
+font-size: 18px;
+line-height: 1.56;
+letter-spacing: 0.03em;
+color: #000000;
+padding-top: 63px;
+padding-right: 24px;
+padding-bottom: 63px;
+padding-left: 24px;
+background: rgba(33, 150, 243, 0.9);
+overflow: auto;
+transform: translateY(100%);
+transition: transform var(--timing-duration) var(--timing-function);
     }
 
 .project-title{
@@ -638,6 +710,66 @@ border: 1px solid #EEEEEE;
 .projects-list-content{
     border-top: 0;
 }
+/* Modal window */
+.backdrop{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: 1;
+    pointer-events: auto;
+    transition: opacity var(--timing-duration) var(--timing-function), visibility var(--timing-function);
+     
+}
+.backdrop.is-hidden .modal{
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.is-hidden{
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+       
+}
+.modal{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scaleX(1);
+transition: transform var(--timing-duration) var(--timing-function);
+width: 528px;
+height: 581px;
+background: var(--primary-bg-color);
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
 
+}
+.modal-close-button{
+    position: absolute;
+    top: 11px;
+    right: 22px;
+    width: 30px;
+    height: 30px;
+    background: var(--primary-bg-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;   
+    
+}
+.modal-close-icon{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 18px;    
+height: 18px;
+fill: var(--logo-color);
+
+}
 
 /* это комментарий, он не несет никакого смысла */
