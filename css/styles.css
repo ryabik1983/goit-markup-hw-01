@@ -713,7 +713,7 @@ border: 1px solid #EEEEEE;
 /* Modal window */
 .backdrop{
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -721,9 +721,9 @@ border: 1px solid #EEEEEE;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    visibility: 1;
+    visibility:visible;
     pointer-events: auto;
-    transition: opacity var(--timing-duration) var(--timing-function), visibility var(--timing-function);
+    transition: opacity var(--timing-duration) var(--timing-function), visibility var(--timing-duration) var(--timing-function);
      
 }
 .backdrop.is-hidden .modal{
@@ -731,7 +731,7 @@ border: 1px solid #EEEEEE;
 }
 .is-hidden{
     opacity: 0;
-    visibility: 0;
+    visibility:hidden;
     pointer-events: none;
        
 }
