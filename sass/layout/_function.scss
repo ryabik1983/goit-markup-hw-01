@@ -1,0 +1,39 @@
+.function-section{
+    padding-bottom: 94px;
+    }
+.function-section-title {
+margin-bottom: 50px;
+color: $title-text-color;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.17;
+text-align: center;
+letter-spacing: 0.03em;
+}
+.function-list {
+    display: flex;
+    }
+.function-list-item {
+position: relative;
+justify-content: space-between;
+&:not(:last-child){
+    margin-right: 30px;}    
+}
+
+.function-label{
+position: absolute;
+bottom: 0px;
+width: 370px;
+height: 70px;
+background: rgba(47, 48, 58, 0.8);
+padding-top: 27px;
+}
+.function-label-text{
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: $primary-bg-color;
+}

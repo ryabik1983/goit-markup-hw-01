@@ -1,0 +1,10 @@
+@mixin bordered($color: black, $type: dashed) {
+        border-top: 1px $color $type;
+        border-bottom: 1px $color $type;
+       }
+ @mixin centeredFlex($type)
+ {
+    display: $type;
+    align-items: center;
+    justify-content: center;
+}

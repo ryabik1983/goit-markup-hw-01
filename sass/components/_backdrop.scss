@@ -1,0 +1,25 @@
+.backdrop{
+    box-sizing: border-box;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility:visible;
+    pointer-events: auto;
+    transition: opacity var(--timing-duration) var(--timing-function), visibility var(--timing-duration) var(--timing-function);
+     
+}
+.backdrop.is-hidden .modal{
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.is-hidden{
+    opacity: 0;
+    visibility:hidden;
+    pointer-events: none;
+       
+}
