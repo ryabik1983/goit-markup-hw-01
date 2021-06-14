@@ -7,7 +7,7 @@ padding-bottom: 94px;
     display: flex;
     justify-content: center;
     }
-.features-item__icon{
+.features__item-icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,16 +16,16 @@ padding-bottom: 94px;
     border-radius: 4px;
     height: 120px;
 }
-.features-item__img{
+.features__item-img{
      width: 70px;
      height: 70px;   
 }
 
-.features-item:not(:last-child){
+.features__item:not(:last-child){
     margin-right: 30px;
 }
 
-.features-item__title {
+.features__item-title{
     color: $title-text-color;
     font-weight: 700;
     font-size: 14px;
@@ -34,7 +34,7 @@ padding-bottom: 94px;
     text-transform: uppercase;
 }
     
-.features-item__text {
+.features__item-text{
     margin-top: 10px;
     color: $text-color;
     font-weight: 400;
