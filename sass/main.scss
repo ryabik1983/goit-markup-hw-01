@@ -1,10 +1,11 @@
-//BASE
-@import "./base/common";
-@import "./base/container";
-
 //UTILS
 @import "./utils/variables";
 @import "./utils/visually-hidden";
+
+
+//BASE
+@import "./base/common";
+@import "./base/container";
 
 //COMPONENTS
 @import "./components/modal-button";

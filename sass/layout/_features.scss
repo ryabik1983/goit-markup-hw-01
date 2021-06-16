@@ -6,7 +6,15 @@ padding-bottom: 94px;
 .features__list{
     display: flex;
     justify-content: center;
+    margin-left: -30px;
+    margin-top: -30px;
     }
+.features__item{
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc((100% - 120px) / 4);
+}
+
 .features__item-icon{
     display: flex;
     justify-content: center;
@@ -21,9 +29,6 @@ padding-bottom: 94px;
      height: 70px;   
 }
 
-.features__item:not(:last-child){
-    margin-right: 30px;
-}
 
 .features__item-title{
     color: $title-text-color;
