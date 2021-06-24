@@ -22,28 +22,78 @@
     <header class="header">
         <div class="container header-container">
             <nav class="header__navigation">
-                <a class="logo link" href="/" lang="en"> <span class="logo__header-logo-first">Web</span><span
-                        class="logo__header-logo-second">Studio</span></a>
+                <a class="logo link" href="/" lang="en">
+                    <span class="logo__header-logo-first">Web</span><span class="logo__header-logo-second">Studio</span>
+                </a>
                 <ul class="menu list">
-                    <li><a class="menu__item link" href="./index.html">Студия</a></li>
-                    <li><a class="menu__item link current" href="#">Портфолио</a></li>
-                    <li><a class="menu__item link" href="#">Контакты</a></li>
+                    <li class="menu__item"><a class="menu__item-link link" href="./index.html">Студия</a></li>
+                    <li class="menu__item"><a class="menu__item-link link current" href="#">Портфолио</a>
+                    </li>
+                    <li class="menu__item"><a class="menu__item-link link" href="#">Контакты</a></li>
                 </ul>
             </nav>
+            <button type="button" class="header__burger-menu" data-menu-button>
+                <svg class="header__burger-menu-icon">
+                    <use href="./images/sprite.svg#burger-menu">
+                    </use>
+                </svg>
+            </button>
             <ul class="contacts list">
-                <li> <a class="contacts__email link" href=" mailto:info@devstudio.com">
+                <li class="contacts__email"> <a class="contacts__email-link link" href="mailto:info@devstudio.com">
                         <svg class="contacts__email-icon">
                             <use href="./images/sprite.svg#icon-envelope">
 
                             </use>
                         </svg>
-
                         info@devstudio.com</a></li>
-                <li> <a class="contacts__tel link" href="tel:+380961111111">
+                <li class="contacts__tel"> <a class="contacts__tel-link link" href="tel:+380961111111">
                         <svg class="contacts__tel-icon">
                             <use href="./images/sprite.svg#icon-smartphone"></use>
                         </svg>+38 096 111 11 11</a></li>
             </ul>
+            <div class="mobile-menu" data-menu>
+                <div class="container mobile-menu__container">
+                    <button type="button" class="mobile-menu__close-button" data-menu-close>
+                        <svg class="mobile-menu__close-button-icon">
+                            <use href="./images/sprite.svg#icon-close-btn"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu__nav list">
+                        <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link link">Студия</a>
+                        </li>
+                        <li class="mobile-menu__item"><a href="#"
+                                class="mobile-menu__link current-mobile link">Портфолио</a>
+                        </li>
+                        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link link">Контакты</a></li>
+                    </ul>
+                    <ul class="mobile-menu__contacts list">
+                        <li class="mobile-menu__contacts-item"><a href="tel:+380961111111"
+                                class="mobile-menu__tel-link link">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mobile-menu__contacts-item"><a href="mailto:info@devstudio.com"
+                                class="mobile-menu__email-link link">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__social list">
+                        <li class="mobile-menu__social-item"><a href="#"
+                                class="mobile-menu__social-link link">Instagram</a>
+                        </li>
+                        <li class="mobile-menu__social-item"><a href="#"
+                                class="mobile-menu__social-link link">Twitter</a>
+                        </li>
+                        <li class="mobile-menu__social-item"><a href="#"
+                                class="mobile-menu__social-link link">Facebook</a>
+                        </li>
+                        <li class="mobile-menu__social-item"><a href="#"
+                                class="mobile-menu__social-link link">LinkedIn</a>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+
+            </div>
         </div>
     </header>
     <main>
@@ -65,8 +115,19 @@
                     <li class="projects-list-item">
                         <a href="#" class="projects-list-item-link link">
                             <div class="projects-list-img">
-                                <img src="./images/portfolio/tehnokryak.jpeg" alt="Проект технокряк" width="370"
-                                    height="294">
+                                <picture class="picture">
+                                    <source
+                                        srcset="./images/portfolio/tehnokryak-desktop@1x.jpg 1x, ./images/portfolio/tehnokryak-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tehnokryak-tablet@1x.jpg 1x, ./images/portfolio/tehnokryak-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/tehnokryak-mobile@1x.jpg 1x, ./images/portfolio/tehnokryak-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="#" alt="Проект Технокряк" width="100%" height="100%" />
+
+                                </picture>
                                 <p class="overlay">Технокряк это современная площадка распространения коронавируса.
                                     Компании используют эту платформу для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.
@@ -81,8 +142,18 @@
                     <li class="projects-list-item">
                         <a href="#" class="projects-list-item-link link">
                             <div class="projects-list-img">
-                                <img src="./images/portfolio/poster.jpeg"
-                                    alt="Проект Поcтер Нью Орлеан против Голденстар" width="370" height="294">
+                                <picture class="picture">
+                                    <source
+                                        srcset="./images/portfolio/poster-desktop@1x.jpg 1x, ./images/portfolio/poster-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/poster-tablet@1x.jpg 1x, ./images/portfolio/poster-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/poster-mobile@1x.jpg 1x, ./images/portfolio/poster-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="#" alt="Проект Поcтер Нью Орлеан против Голденстар" width="100%" />
+                                </picture>
                                 <p class="overlay"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
                                     quaerat?
                                 </p>
@@ -97,8 +168,18 @@
                     <li class="projects-list-item">
                         <a href="#" class="projects-list-item-link link">
                             <div class="projects-list-img">
-                                <img src="./images/portfolio/restaurant.jpeg" alt="Проект ресторан" width="370"
-                                    height="294">
+                                <picture class="picture">
+                                    <source
+                                        srcset="./images/portfolio/restaurant-desktop@1x.jpg 1x, ./images/portfolio/restaurant-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/restaurant-tablet@1x.jpg 1x, ./images/portfolio/restaurant-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/restaurant-mobile@1x.jpg 1x, ./images/portfolio/restaurant-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="#" alt="Проект ресторан" width="100%" />
+                                </picture>
                                 <p class="overlay"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
                                     quaerat?
                                 </p>
@@ -113,7 +194,19 @@
                     <li class="projects-list-item">
                         <a href="#" class="projects-list-item-link link">
                             <div class="projects-list-img">
-                                <img src="./images/portfolio/prime.jpeg" alt="Проект Prime" width="370" height="294">
+                                <picture class="picture">
+                                    <source
+                                        srcset="./images/portfolio/prime-desktop@1x.jpg 1x, ./images/portfolio/prime-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/prime-tablet@1x.jpg 1x, ./images/portfolio/prime-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/prime-mobile@1x.jpg 1x, ./images/portfolio/prime-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="#" alt="Проект Prime" width="100%" />
+                                </picture>
+
                                 <p class="overlay"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
                                     quaerat?
                                 </p>
@@ -128,7 +221,19 @@
                     <li class="projects-list-item">
                         <a href="#" class="projects-list-item-link link">
                             <div class="projects-list-img">
-                                <img src="./images/portfolio/boxes.jpeg" alt="Проект Boxes" width="370" height="294">
+                                <picture class="picture">
+                                    <source
+                                        srcset="./images/portfolio/boxes-desktop@1x.jpg 1x, ./images/portfolio/boxes-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/boxes-tablet@1x.jpg 1x, ./images/portfolio/boxes-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/boxes-mobile@1x.jpg 1x, ./images/portfolio/boxes-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="#" alt="Проект Prime" width="100%" />
+                                </picture>
+
                                 <p class="overlay"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
                                     quaerat?
                                 </p>
@@ -142,8 +247,18 @@
                     <li class="projects-list-item">
                         <a href="#" class="projects-list-item-link link">
                             <div class="projects-list-img">
-                                <img src="./images/portfolio/inspiration.jpeg" alt="Проект Веб-сайт" width="370"
-                                    height="294">
+                                <picture class="picture">
+                                    <source
+                                        srcset="./images/portfolio/inspiration-desktop@1x.jpg 1x, ./images/portfolio/inspiration-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/inspiration-tablet@1x.jpg 1x, ./images/portfolio/inspiration-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/inspiration-mobile@1x.jpg 1x, ./images/portfolio/inspiration-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="#" alt="Проект Веб-сайт" width="100%" />
+                                </picture>
                                 <p class="overlay"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
                                     quaerat?
                                 </p>
@@ -158,8 +273,19 @@
                     <li class="projects-list-item">
                         <a href="#" class="projects-list-item-link link">
                             <div class="projects-list-img">
-                                <img src="./images/portfolio/limited-edition.jpeg" alt="Проект Издание" width="370"
-                                    height="294">
+                                <picture class="picture">
+                                    <source
+                                        srcset="./images/portfolio/limited-desktop@1x.jpg 1x, ./images/portfolio/limited-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/limited-tablet@1x.jpg 1x, ./images/portfolio/limited-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/limited-mobile@1x.jpg 1x, ./images/portfolio/limited-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="#" alt="Проект Издание" width="100%" />
+                                </picture>
+
                                 <p class="overlay"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
                                     quaerat?
                                 </p>
@@ -175,7 +301,19 @@
                     <li class="projects-list-item">
                         <a href="#" class="projects-list-item-link link">
                             <div class="projects-list-img">
-                                <img src="./images/portfolio/lab.jpeg" alt="Проект LAB" width="370" height="294">
+                                <picture class="picture">
+                                    <source
+                                        srcset="./images/portfolio/lab-desktop@1x.jpg 1x, ./images/portfolio/lab-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/lab-tablet@1x.jpg 1x, ./images/portfolio/lab-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/lab-mobile@1x.jpg 1x, ./images/portfolio/lab-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="#" alt="Проект LAB" width="100%" />
+                                </picture>
+
                                 <p class="overlay"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
                                     quaerat?
                                 </p>
@@ -191,8 +329,18 @@
                     <li class="projects-list-item">
                         <a href="#" class="projects-list-item-link link">
                             <div class="projects-list-img">
-                                <img src="./images/portfolio/growing-business.jpeg" alt="Проект Growing Business"
-                                    width="370" height="294">
+                                <picture class="picture">
+                                    <source
+                                        srcset="./images/portfolio/growing-desktop@1x.jpg 1x, ./images/portfolio/growing-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/growing-tablet@1x.jpg 1x, ./images/portfolio/growing-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/growing-mobile@1x.jpg 1x, ./images/portfolio/growing-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="#" alt="Проект Growing Business" width="100%" />
+                                </picture>
                                 <p class="overlay"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
                                     quaerat?
                                 </p>
@@ -209,9 +357,9 @@
         </section>
     </main>
     <footer class="footer-section">
-        <div class="container footer-logo-adress-social">
+        <div class="container footer-container">
             <div class="footer-logo-adresss-links">
-                <a class="logo link" href="/" lang="en"><span class="logo-footer-first">Web</span><span
+                <a class="logo footer-logo link" href="/" lang="en"><span class="logo-footer-first">Web</span><span
                         class="logo-footer-second">Studio</span></a>
                 <div class="footer-contacts-links">
                     <address>
@@ -260,21 +408,27 @@
                     </li>
                 </ul>
             </div>
-            <form action="#" method="GET" class="footer-subscribe">
-                <label class="footer-subscribe-title" for="input-email">Подпишитесь на рассылку</label>
-                <div class="footer-subscribe-input-btn">
-                    <input class="footer-subscribe-input" type="email" name="user-email" id="input-email"
-                        placeholder="E-mail">
-                    <button type="submit" class="footer-subscribe-btn">Подписаться
-                        <svg class="footer-subscribe-btn-icon">
-                            <use href="./images/sprite.svg#icon-footer-send"></use>
-                        </svg>
-                    </button>
-                </div>
-            </form>
+            <div class="footer-subscribe">
+                <form action="#" method="GET" class="footer-subscribe">
+                    <label class="footer-subscribe-title" for="input-email">Подпишитесь на рассылку</label>
+                    <div class="footer-subscribe-input-btn">
+                        <input class="footer-subscribe-input" type="email" name="footer-user-email-input"
+                            id="input-email" placeholder="E-mail">
+                        <button type="submit" class="footer-subscribe-btn">Подписаться
+                            <svg class="footer-subscribe-btn-icon">
+                                <use href="./images/sprite.svg#icon-footer-send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
 
         </div>
+
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

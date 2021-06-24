@@ -1,14 +1,17 @@
+
 .backdrop{
     box-sizing: border-box;
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 100vw;
-    height: 100vh;
+    padding: 93px 15px 0px 15px;
+    width: 100%;
+    height: 100%;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     visibility:visible;
+    overflow-y: scroll;
     pointer-events: auto;
     transition: opacity var(--timing-duration) var(--timing-function), visibility var(--timing-duration) var(--timing-function);
      
@@ -21,5 +24,18 @@
     opacity: 0;
     visibility:hidden;
     pointer-events: none;
+}
        
+// @media screen and (min-width:768px){
+//   .backdrop{
+//     padding: 208px 159px 0px 0px;
+//   }
+// }
+
+@media screen and (min-width:1200px){
+  .backdrop{
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
 }

@@ -12,6 +12,9 @@ body {
     background-color: $primary-bg-color;
     font-family: Roboto, sans-serif;
     }
+body.modal-open{
+    overflow:hidden;
+    }
     
 
 h1,
