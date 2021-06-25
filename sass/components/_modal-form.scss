@@ -135,3 +135,9 @@ margin-top: 4px;
     border: 0;
     border-radius: 4px;
 }
+@media screen and (min-width:1200px) {
+.modal-form-checkbox-policy,.modal-form-checkbox-policy-link{
+    font-size: 14px;
+    line-height: 1.71;
+}    
+}
