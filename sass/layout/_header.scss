@@ -29,6 +29,8 @@
 }
 .header__burger-menu{
     position: relative;
+    width: 40px;
+    height: 40px;
     line-height: 0;
     padding: 0;
     border: 0;
@@ -36,8 +38,8 @@
     cursor: pointer;
 }
 .header__burger-menu-icon{
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 16px;
 }
 .header__menu-close-icon{
     position: absolute;
@@ -95,8 +97,10 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
+    // font-size: 14px;
+    // line-height: 1.14;
     letter-spacing: 0.02em;
     color: $text-color;
     transition: color var(--timing-duration) var(--timing-function);
@@ -122,8 +126,10 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
+    // font-size: 14px;
+    // line-height: 1.14;
     letter-spacing: 0.02em;
     color: $text-color;
     transition: color var(--timing-duration) var(--timing-function);
@@ -173,6 +179,10 @@
     align-items: center;
     & li:not(:last-child){
     margin-right: 50px;}
+}
+.contacts__tel-link, .contacts__email-link{
+    font-size: 14px;
+    line-height: 1.14;
 }
 .contacts__email{
     margin-bottom: 0px;
