@@ -144,7 +144,7 @@ img {
 
 .modal {
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
@@ -411,7 +411,9 @@ img {
     margin-bottom: 32px;
   }
   .mobile-menu__nav {
-    margin-bottom: 302px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
   }
   .mobile-menu__contacts {
     margin-bottom: 64px;
@@ -436,6 +438,7 @@ img {
   }
   .mobile-menu__social {
     display: flex;
+    flex-wrap: wrap;
   }
   .mobile-menu__social-item:not(:last-child) {
     margin-right: 10px;
@@ -448,6 +451,10 @@ img {
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: #2196f3;
+  }
+  .mobile-menu__bottom-box {
+    position: fixed;
+    bottom: 48px;
   }
 }
 

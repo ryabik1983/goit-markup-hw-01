@@ -58,7 +58,9 @@ color:$title-text-color;
 }
 
 &__nav{
-    margin-bottom: 302px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 &__contacts{
     margin-bottom: 64px;
@@ -83,6 +85,7 @@ color: $text-color;
 }
 &__social{
     display: flex;
+    flex-wrap: wrap;
     
 }
 &__social-item:not(:last-child){
@@ -98,6 +101,10 @@ font-size: 18px;
 line-height: 1.22;
 letter-spacing: 0.02em;
 color:$accent-text-color;
+}
+&__bottom-box{
+    position: fixed;
+    bottom: 48px
 }
 }
 }
